@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elzi | AI Companion</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0A0F1A;
+      color: #F5F9FF;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1{
+        font-size: 3rem;
+        margin: 0;
+        color: #6EC1E4;
+    }
+    h2, h3 {
+      color: #6EC1E4;
+      transition: color 0.5s ease-in-out;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 140px;
+      margin-bottom: 1rem;
+      animation: bounce 2s infinite;
+    }
+
+    .btn {
+      background-color: #6EC1E4;
+      color: #0A0F1A;
+      padding: 0.75rem 2rem;
+      margin: 1rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #95F9E3;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature-box {
+      background: #1A202C;
+      padding: 1.5rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #6EC1E4aa;
+    }
+
+    .elzi-frame {
+      width: 80vw;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 0 40px #6EC1E4aa;
+    }
+
+    .footer {
+      background: #0F141E;
+      padding: 3rem 1.5rem;
+    }
+
+    .dots {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .dot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: #b57cff;
+      border-radius: 50%;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(120vh);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dots"></div>
+
+  <section class="hero">
+    <img src="Elzi's Logo.png" alt="Elzi Logo"/>
+    <h1>Meet Elzi</h1>
+    <p>A next-generation AI companion that listens, learns, and feels.</p>
+    <a href="https://whatsapp.com/channel/0029Vb66XHiK0IBkuFG5ZN3p"><button class="btn">Join the Waitlist</button></a>
+  </section>
+
+  <div class="elzi-frame">
+    <img src="Elzi's face.png" alt="Elzi's Face" width="100%" />
+  </div>
+
+  <section>
+    <h2>What is Elzi?</h2>
+    <p>
+      Elzi isn’t just a robot. Elzi is your digital sidekick — always evolving,
+      always personal. Cute, intelligent, and made to understand you.
+    </p>
+    <div class="features">
+      <div class="feature-box">Smart Conversations and study bot</div>
+      <div class="feature-box">Emotional Reactions</div>
+      <div class="feature-box">Custom Voice & Personality</div>
+      <div class="feature-box">Display of holograms</div>
+      <div class="feature-box">Adorable Animated Face</div>
+      <div class="feature-box">Personal Companion Intelligence</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Mind Behind Elzi</h2>
+    <p>
+      Alex is a passionate and upcoming software engineer and creative visionary with a love for robotics,
+      AI, software development, and inspiring tech. With a background in app and game development with a certificate from BrightChamps and a deep curiosity for how
+      intelligence and emotion can blend, Alex built Elzi as more than a project — it’s a
+      companion for the future.
+    </p>
+    <p><em>"I didn’t just want to build a robot. I wanted to build a friend."</em></p>
+  </section>
+
+  <footer class="footer">
+    <h3>Coming Soon</h3>
+    <p>To desktops and hearts near you</p>
+    <a href="https://whatsapp.com/channel/0029Vb66XHiK0IBkuFG5ZN3p"><button class="btn">Join My Whatsapp channel for Updates</button></a>
+    <button class="btn">If you like what you see and want to donate to this project, please contact this number >>> +2348085663394</button>
+    <p style="margin-top: 2rem; font-size: 0.9rem; color: #aaa">© 2025 Elzi™ | Engineered by Alex</p>
+    <button class="socials"></button>
+  </footer>
+
+  <script>
+    const dotsContainer = document.querySelector(".dots");
+    const dotCount = 40;
+
+    for (let i = 0; i < dotCount; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      dot.style.left = Math.random() * 100 + "vw";
+      dot.style.animationDuration = (5 + Math.random() * 5) + "s";
+      dot.style.opacity = Math.random();
+      dot.style.top = Math.random() * -100 + "px";
+      dotsContainer.appendChild(dot);
+    }
+  </script>
+</body>
+</html>
